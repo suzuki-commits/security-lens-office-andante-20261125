@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>セキュリティ対策診断 office-andante.com</title>
+<style>
+:root{--ink:#221714;--sub:#4f4944;--line:#e4e0dc;--bg:#f7f6f4;--card:#fff;--blue:#0068B6;--high:#c62f12;--mid:#b26a00;--low:#2f7d4f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 "Noto Sans JP","Yu Gothic UI","Meiryo",sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:32px 20px 56px}header{border-bottom:3px solid var(--blue);padding-bottom:16px;margin-bottom:24px}
+.eyebrow{font-size:14px;letter-spacing:.12em;color:var(--blue);font-weight:700}h1{font-size:28px;margin:6px 0 4px;line-height:1.4}
+.meta{color:var(--sub);font-size:15px}.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin:0 0 18px}
+h2{font-size:21px;margin:0 0 10px}.lvl{display:inline-block;font-weight:700;padding:2px 12px;border-radius:999px;color:#fff;margin-left:8px;font-size:15px}
+.lvl.high,.pill.high{background:var(--high)}.lvl.mid,.pill.mid{background:var(--mid)}.lvl.low,.pill.low{background:var(--low)}
+.dom{border-top:1px solid var(--line);padding:16px 0}.dom:first-of-type{border-top:0;padding-top:4px}.dh{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.no{font:700 15px/1 Consolas,monospace;color:var(--blue)}h3{font-size:19px;margin:0;flex:1}.pill{color:#fff;font-size:15px;font-weight:700;padding:2px 10px;border-radius:999px}
+.why{color:var(--sub);margin:8px 0}ol,ul{margin:6px 0 0;padding-left:1.4em}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rm{background:var(--bg);border-radius:8px;padding:12px 14px}h4{margin:0 0 4px;font-size:17px;color:var(--blue)}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.note{font-size:16px;color:var(--sub)}footer{font-size:14px;color:var(--sub);margin-top:24px}
+@media(max-width:720px){.grid,.two{grid-template-columns:1fr}h1{font-size:23px}}
+</style></head><body><div class="wrap">
+<header><div class="eyebrow">COMIX / SECURITY LENS</div><h1>セキュリティ対策診断：office-andante.com</h1>
+<div class="meta">対象URL: https://office-andante.com/<br>ページタイトル: 【公式】オフィスアンダンテ合同会社<br>解析日時: 2026-11-25 12:13</div></header>
+<div class="card"><h2>経営向け要約<span class="lvl low">標準</span></h2><p>公開情報から見えたのは、問い合わせフォームもログイン画面もほぼ無い、小規模なコーポレートサイトです。外部スクリプトは1件で、コンテンツセキュリティポリシーは観測できました。一方、通信の強制、フレーム埋め込み制御、参照元情報の制御に関するヘッダーは観測できませんでした。観測範囲が限られるため、安全性や脆弱性の有無は判断できません。最初に取り組むのは、サイト自体の改修よりも、ドメイン・メール・管理アカウントの基本統制を確認することです。</p></div>
+<div class="card"><h2>5領域の推奨対策</h2>
+<section class="dom"><div class="dh"><span class="no">01</span><h3>ID・なりすまし</h3><span class="pill mid">優先度 中</span></div>
+<p class="why">サイト上にパスワード入力欄やフォームは観測されず、サイト経由のID窃取リスクは限定的と見られます。ただし、小規模法人ではドメイン管理や独自ドメインのメールがなりすましの足場になりやすく、これらは公開ページからは確認できません。</p><ol><li>ドメインの登録事業者、DNS、サイト管理画面、メールの各管理者アカウントを棚卸しし、多要素認証の適用状況を確認する</li><li>独自ドメインのメールについて、送信元なりすまし対策(送信ドメイン認証)の設定状況を点検する</li><li>退職・委託終了時にアカウントを失効させる手順と担当者を決めておく</li></ol></section>
+<section class="dom"><div class="dh"><span class="no">02</span><h3>公開資産・脆弱性</h3><span class="pill mid">優先度 中</span></div>
+<p class="why">コンテンツセキュリティポリシーは観測できました。一方、通信の暗号化強制、フレーム埋め込み制御、コンテンツ種別の誤認防止、参照元情報の制御に関するヘッダーは観測できませんでした。これは公開情報の限定的な観測であり、脆弱性の存在を示すものではありません。</p><ol><li>サイトの稼働環境(レンタルサーバーやCMS等)と更新担当者を一覧化し、本体・テーマ・プラグインの更新状況を確認する</li><li>観測できなかった各ヘッダーについて、サーバー設定で付与できるかを制作・運用担当に確認し、導入可否を判断する</li><li>証明書の有効期限、独自ドメインの更新期限、不要になった公開ページやサブドメインの有無を定期点検の項目に加える</li></ol></section>
+<section class="dom"><div class="dh"><span class="no">03</span><h3>SaaS・委託先・連携アプリ</h3><span class="pill low">優先度 低</span></div>
+<p class="why">外部スクリプトは1件のみで、連携の広がりは小さいと見られます。ただし、その提供元や用途、管理者は公開情報からは分かりません。サイト制作や運用の委託先が持つ管理権限も確認できていません。</p><ol><li>読み込んでいる外部スクリプト1件の提供元・用途・設置担当者を特定し、現在も必要か確認する</li><li>サイト制作・保守の委託先と、その担当者が持つ管理権限の範囲を書面で把握する</li><li>業務で使うSaaSの一覧を作り、各サービスの管理者と退職時の権限削除手順を確認する</li></ol></section>
+<section class="dom"><div class="dh"><span class="no">04</span><h3>データ・生成AI・設定ミス</h3><span class="pill low">優先度 低</span></div>
+<p class="why">公開フォームが観測されず、サイト上で個人情報を直接収集している様子は見られません。そのため、サイト経由のデータ漏えいリスクは相対的に低いと見られます。ただし、社内の共有設定や生成AIの利用ルールは公開情報から確認できません。</p><ol><li>クラウドストレージやオンライン文書の共有設定を点検し、リンクを知っていれば誰でも閲覧できる状態のファイルがないか確認する</li><li>生成AIに入力してよい情報と入力してはならない情報(顧客情報・契約情報など)を1枚にまとめて周知する</li><li>将来フォームや会員機能を追加する際は、取得項目の最小化と保管・削除のルールを事前に決める</li></ol></section>
+<section class="dom"><div class="dh"><span class="no">05</span><h3>検知・初動・復旧</h3><span class="pill mid">優先度 中</span></div>
+<p class="why">サイトの改ざんやメールの乗っ取りが起きた場合に、誰が気づき、誰が判断し、どう復旧するかは公開情報から分かりません。規模が小さい組織ほど、連絡先と復旧手段が属人的になりやすい点を考慮しました。</p><ol><li>サイト・ドメイン・メールで異常が起きた際の連絡先(社内責任者、サーバー事業者、制作委託先)を一覧にして共有する</li><li>サイトのデータとサーバー設定のバックアップ取得状況と、復元を試した実績を確認する</li><li>サイトの表示内容が書き換わっていないかを定期的に目視確認する担当者を決める</li></ol></section></div>
+<div class="card"><h2>実行ロードマップ</h2><div class="grid"><div class="rm"><h4>0〜7日</h4><ul><li>ドメイン管理、サイト管理、メールの管理者アカウントを洗い出し、多要素認証が未設定のものを把握する</li><li>サイト異常時の連絡先(社内責任者、サーバー事業者、制作委託先)を一覧にする</li><li>読み込んでいる外部スクリプト1件の用途と設置担当者を確認する</li></ul></div><div class="rm"><h4>30日以内</h4><ul><li>管理者アカウントへの多要素認証の適用を完了し、不要なアカウントを整理する</li><li>独自ドメインのメールの送信ドメイン認証の設定状況を点検し、必要なら設定する</li><li>観測できなかった各ヘッダーの導入可否を運用担当と確認し、導入する範囲を決める</li></ul></div><div class="rm"><h4>90日以内</h4><ul><li>サイトの更新状況、証明書とドメインの期限、バックアップの復元可否を点検する定期チェックを仕組み化する</li><li>委託先を含む権限と退職時の失効手順を文書化し、年1回見直す運用にする</li><li>生成AIとクラウド共有の利用ルールを社内に周知し、初回の設定点検を実施する</li></ul></div></div></div>
+<div class="card"><h2>確認したい質問</h2><ul><li>ドメイン、サイト管理画面、メールの管理者アカウントは誰が管理していますか。多要素認証は適用されていますか。</li><li>サイトの制作・保守は社内と外部委託のどちらで行っていますか。委託先がいる場合、その担当者の管理権限はどこまでですか。</li><li>読み込んでいる外部スクリプト1件は何の目的で導入したもので、現在も必要ですか。</li><li>サイトやメールに異常が起きた場合の連絡先と、復旧に使えるバックアップはありますか。復元を試したことはありますか。</li><li>今後、問い合わせフォームや会員機能など、個人情報を扱う機能をサイトに追加する予定はありますか。</li></ul></div>
+<div class="card two"><div><h2>公開情報から観測できた事項</h2><ul><li>公開ページタイトル: 【公式】オフィスアンダンテ合同会社</li><li>HTTPSで公開ページへ接続</li><li>公開フォーム: 0件</li><li>外部スクリプト参照: 1件</li><li>観測できたセキュリティ関連ヘッダー: content-security-policy</li></ul></div>
+<div><h2>観測できない事項・前提</h2><ul class="note"><li>公開HTMLとHTTPレスポンスヘッダーだけを限定的に参照しています。認証後の画面、端末、メール、クラウド設定、委託先や実際の権限設計は評価していません。</li><li>ヘッダーの有無や公開ページの記載だけで、脆弱性・安全性・法令遵守を断定するものではありません（脆弱性診断・侵入テストではありません）。</li><li>出力は対策の優先順位を整理する初期診断です。契約・監査・法務判断の代替にはなりません。</li></ul></div></div>
+<footer>本レポートは公開ページの限定的な情報と過去の漏洩原因類型（5領域）をもとに、優先すべき対策を整理したものです。脆弱性の有無・安全性を断定するものではありません。株式会社コミクス</footer>
+</div></body></html>
